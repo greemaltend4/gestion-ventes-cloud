@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 
 // Health check route
 app.get('/health', (req, res) => {
+  console.log('Health check received');
   res.status(200).json({ status: 'UP' });
 });
 
