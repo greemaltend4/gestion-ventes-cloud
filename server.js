@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
   res.send('API de Gestion des Ventes');
 });
 
+// Health check route
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'UP' });
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
